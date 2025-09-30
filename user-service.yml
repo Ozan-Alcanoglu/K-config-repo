@@ -4,6 +4,20 @@ server:
 spring:
   application:
     name: user-service
+  datasource:
+    url: jdbc:postgresql://postgres-service:5432/userdb
+    username: ${DB_USERNAME}     
+    password: ${DB_PASSWORD}      
+    driver-class-name: org.postgresql.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
 
   kafka:
     consumer:
