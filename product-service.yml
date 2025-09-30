@@ -3,6 +3,21 @@ server:
 spring:
   application:
     name: product-service
+
+  datasource:
+    url: jdbc:postgresql://postgres-service:5432/productdb
+    username: ${DB_USERNAME}      
+    password: ${DB_PASSWORD}      
+    driver-class-name: org.postgresql.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
   kafka:
     producer:
       bootstrap-servers: kafka.microservices.svc.cluster.local:9092
