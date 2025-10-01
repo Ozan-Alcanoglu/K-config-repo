@@ -20,8 +20,9 @@ spring:
         format_sql: true
 
   kafka:
+    bootstrap-servers: kafka:9092  
     consumer:
-      bootstrap-servers: kafka.microservices.svc.cluster.local:9092
+      bootstrap-servers: kafka:9092  
       group-id: user-service-group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
