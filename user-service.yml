@@ -20,7 +20,7 @@ spring:
         format_sql: true
 
   kafka:
-    bootstrap-servers: kafka-controller-headless:9092
+    bootstrap-servers: kafka:9092
     properties:
       security.protocol: SASL_PLAINTEXT
       sasl.mechanism: SCRAM-SHA-256
