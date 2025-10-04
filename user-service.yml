@@ -20,7 +20,11 @@ spring:
         format_sql: true
 
   kafka:
-    bootstrap-servers: kafka:9092
+    bootstrap-servers: kafka.microservices.svc.cluster.local:9092
+    properties:
+      security.protocol: SASL_PLAINTEXT
+      sasl.mechanism: SCRAM-SHA-256
+      sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="user1" password="3jIkxS8vKo";
     consumer:
       group-id: user-service-group
       auto-offset-reset: earliest
