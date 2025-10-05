@@ -20,10 +20,6 @@ spring:
         format_sql: true
   kafka:
     bootstrap-servers: kafka:9092
-    properties:
-      security.protocol: SASL_PLAINTEXT
-      sasl.mechanism: PLAIN
-      sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="user_user1" password="BBfYxTBSYg";
     consumer:
       group-id: product-service-group
       auto-offset-reset: earliest
