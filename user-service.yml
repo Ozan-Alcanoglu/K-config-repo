@@ -64,7 +64,7 @@ management:
 
 minio:
   
-  url: http://minio-service.logging:9001
+  url: http://minio-service.logging:9000
   
   bucket-name: user-profiles
 
